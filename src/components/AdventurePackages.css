@@ -1,0 +1,262 @@
+.adventure-section {
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+  position: relative;
+}
+
+.adventure-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adventure-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  color: #0A2647;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.adventure-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0A2647, #2B4865);
+  margin: 1rem auto 2rem;
+  border-radius: 2px;
+}
+
+.adventure-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #2B4865;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #EDF2F7;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(44, 82, 130, 0.1);
+}
+
+.package-image-wrapper {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.package-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.package-card:hover .package-image {
+  transform: scale(1.1);
+}
+
+.package-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(44, 82, 130, 0.4), transparent);
+}
+
+.package-price {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: #2C5282;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.package-duration {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2C5282;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.package-content {
+  padding: 1.2rem;
+}
+
+.package-title {
+  font-size: 1.2rem;
+  color: #2C5282;
+  margin-bottom: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.package-location {
+  color: #4A5568;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.difficulty-badge[data-difficulty="Easy"] {
+  background: #E6FFFA;
+  color: #2C7A7B;
+}
+
+.difficulty-badge[data-difficulty="Moderate"] {
+  background: #FEFCBF;
+  color: #975A16;
+}
+
+.difficulty-badge[data-difficulty="Challenging"] {
+  background: #FED7D7;
+  color: #9B2C2C;
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0;
+}
+
+.highlights-list li {
+  color: #4A5568;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlights-list li::before {
+  content: "•";
+  color: #2C5282;
+  font-weight: bold;
+}
+
+.book-package-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2C5282;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-package-btn:hover {
+  background: #3182CE;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+  .packages-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .packages-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .adventure-section {
+    padding: 2rem 1rem;
+  }
+
+  .adventure-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .packages-container {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .package-image-wrapper {
+    height: 200px;
+  }
+}
+
+/* Responsive styles for all sections */
+@media (max-width: 992px) {
+  .title-alt,
+  .title-int,
+  .adventure-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-alt,
+  .title-int,
+  .adventure-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-alt,
+  .title-int,
+  .adventure-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+} 
