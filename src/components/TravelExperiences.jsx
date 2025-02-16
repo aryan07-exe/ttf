@@ -13,7 +13,7 @@ const testimonials = [
     date: "October 2023"
   },
   {
-    name: "John Doe",
+    name: "Aaryan ",
     location: "Singapore",
     image: "https://randomuser.me/api/portraits/men/1.jpg",
     rating: 5,

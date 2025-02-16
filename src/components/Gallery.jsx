@@ -6,7 +6,7 @@ import adv3 from '../images/k3.jpg';
 import adv4 from '../images/k1.jpg';
 import taj from '../images/taj.jpg';
 import trip from '../images/trip3.jpg';
-import mal from '../images/new.jpg';
+import mal from '../images/adv4.jpg';
 import g2 from '../images/trip4.jpg';
 import g1 from '../images/new2.jpg';
 const Gallery = () => {
@@ -66,22 +66,22 @@ const Gallery = () => {
     {
       id: 3,
       url: adv1,
-      title: 'Island Paradise',
-      location: 'Maldives',
+      title: 'Camping',
+      location: 'Uttrakhand',
       size: 'tall',
       description: 'Luxury overwater villas and pristine beaches'
     },{
       id: 3,
       url: g1,
-      title: 'Island Paradise',
-      location: 'Maldives',
+      title: "Humayun's Tomb",
+      location: 'Delhi',
       size: 'tall',
       description: 'Luxury overwater villas and pristine beaches'
     },
     {
       id: 7,
       url: g2,
-      title: 'Beach Sunset',
+      title: 'Mountain Valley',
       location: 'Bali',
       size: 'big',
       description: 'Magical sunsets over pristine beaches'

@@ -34,7 +34,7 @@ const DomesticDestinations = () => {
     {
       id: 1,
       image: nan,
-      name: "Nainitaal",
+      name: "Nainital",
       
       price: "From 6999 rs",
       rating: 4.8,

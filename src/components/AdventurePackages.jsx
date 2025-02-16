@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './AdventurePackages.css';
 import trekking from '../images/adv1.jpg';
-import rafting from '../images/adv2.jpg';
-import camping from '../images/adv3.jpg';
-import safari from '../images/adv4.jpg';
+import rafting from '../images/tiverrafting.avif';
+import camping from '../images/desert2.avif';
+import safari from '../images/wildlife.avif';
 import ExploreForm from './ExploreForm';
 
 const packages = [
