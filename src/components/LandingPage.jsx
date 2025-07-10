@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import Navbar from "./Navbar.jsx";
 import HeroSlider from './HeroSlider.jsx';
+import WhatsAppButton from './WhatsAppButton';
 
 import Domestic from './Domestic';
 import TravelExperiences from './TravelExperiences';
@@ -37,7 +38,8 @@ function LandingPage() {
       {/* Contact Us Section */}
       <ContactUs />
 
-    
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
 
       {/* Footer Section */}
       <Footer />

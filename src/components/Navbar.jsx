@@ -41,7 +41,6 @@ const Navbar = () => {
 
           <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
             
-            
             <a href="#domestic" className="nav-link" onClick={() => scrollToSection('domestic-section')}>
               Domestic
             </a>
