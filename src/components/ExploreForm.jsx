@@ -87,7 +87,7 @@ const ExploreForm = ({ isOpen, onClose }) => {
         ) : (
           <>
             <h2>Start Your Journey</h2>
-            <p>Fill in your details and we'll get back to you shortly</p>
+            {/* <p>Fill in your details and we'll get back to you shortly</p> */}
             
             <form onSubmit={handleSubmit}>
               <div className="form-group">

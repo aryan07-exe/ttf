@@ -32,11 +32,13 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-.navbar-logo:hover {
-    text-decoration: none;
+.navbar-logo:hover,
+.navbar-logo:focus {
+    text-decoration: none !important;
+    outline: none;
 }
 
 .logo-image {
