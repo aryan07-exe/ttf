@@ -35,17 +35,13 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <div className="navbar-logo">
-            <img src={logo} alt="TTF Holidays" className="logo-image" />
+            <img src={logo} alt="TTF Holidays" className="logo-image"/>
             <h2 className="company-name">TTF HOLIDAYS</h2>
           </div>
 
           <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-            <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-              Home
-            </Link>
-            <a href="#hero" className="nav-link" onClick={() => scrollToSection('hero')}>
-              About
-            </a>
+            
+            
             <a href="#domestic" className="nav-link" onClick={() => scrollToSection('domestic-section')}>
               Domestic
             </a>
@@ -54,6 +50,9 @@ const Navbar = () => {
             </a>
             <a href="#testimonials" className="nav-link" onClick={() => scrollToSection('testimonials-section')}>
               Experiences
+            </a>
+            <a href="#hero" className="nav-link" onClick={() => scrollToSection('hero')}>
+              About
             </a>
             <a href="#gallery" className="nav-link" onClick={() => scrollToSection('gallery-section')}>
               Gallery
