@@ -4,8 +4,8 @@ import { FaWhatsapp, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactUs = () => {
   const contactInfo = {
-    phone: "+91 8010855357",
-    whatsapp: "+91 8010855357",
+    phone: "+91 8287334507",
+    whatsapp: "+91 8287334507",
     email: "ttfholidays@gmail.com",
     instagram: "ttf_holidays"
   };

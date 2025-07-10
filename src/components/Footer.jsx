@@ -7,7 +7,7 @@ const Footer = () => {
   
   const footerData = {
     contact: {
-      phone: "+91 8010855357",
+      phone: "+91 8287334507",
       email: "ttfholidays@gmail.com",
       address: "Dwarka, New Delhi, India"
     },
