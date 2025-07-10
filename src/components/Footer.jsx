@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,17 +13,32 @@ const Footer = () => {
       address: "Dwarka, New Delhi, India"
     },
     quickLinks: [
-      { title: "About Us", path: "/about" },
-      { title: "Destinations", path: "/destinations" },
-      { title: "Tour Packages", path: "/packages" },
-      { title: "Contact Us", path: "/contact" }
+      { title: "Domestic Destinations", path: "#domestic-section" },
+      { title: "International Destinations", path: "#international-section" },
+      { title: "Experiences", path: "#testimonials-section" },
+      { title: "Contact", path: "#contact-section" }
     ],
     services: [
       "Customized Tours",
       "Luxury Travel",
       "Adventure Tours",
-      "Cultural Tours"
+      "Pilgrimage Tours"
     ]
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavigation = (path, e) => {
+    if (path.startsWith('#')) {
+      e.preventDefault();
+      const sectionId = path.substring(1);
+      scrollToSection(sectionId);
+    }
   };
 
   return (
@@ -54,7 +70,23 @@ const Footer = () => {
             <ul>
               {footerData.quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.path}>{link.title}</a>
+                  {link.path.startsWith('/') ? (
+                    <Link 
+                      to={link.path} 
+                      className="nav-link"
+                      onClick={(e) => handleNavigation(link.path, e)}
+                    >
+                      {link.title}
+                    </Link>
+                  ) : (
+                    <a 
+                      href={link.path} 
+                      className="nav-link"
+                      onClick={(e) => handleNavigation(link.path, e)}
+                    >
+                      {link.title}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -74,15 +106,15 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; {currentYear} TTF Holidays. All rights reserved.</p>
         <div className="footer-bottom-links">
-          <a href="/privacy">Privacy</a>
+          <Link to="/privacy">Privacy</Link>
           <span className="separator">•</span>
-          <a href="/terms">Terms</a>
+          <Link to="/terms">Terms</Link>
           <span className="separator">•</span>
-          <a href="/sitemap">Sitemap</a>
+          <Link to="/sitemap">Sitemap</Link>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;
