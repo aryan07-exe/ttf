@@ -34,10 +34,10 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
-          <div className="navbar-logo">
+          <Link to="/" className="navbar-logo" onClick={() => window.scrollTo(0, 0)}>
             <img src={logo} alt="TTF Holidays" className="logo-image"/>
-            <h2 className="company-name">TTF HOLIDAYS</h2>
-          </div>
+            <h2 className="company-name" id='companyname'>TTF HOLIDAYS</h2>
+          </Link>
 
           <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
             
